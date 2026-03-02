@@ -1,14 +1,18 @@
-import React from "react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="app-container">
-      <section className="card" role="alert" aria-live="assertive">
-        <header className="header">
-          <h1 className="title">404 – Page Not Found</h1>
-          <p className="subtitle">The page you’re looking for doesn’t exist.</p>
-        </header>
-      </section>
-    </main>
+    <div className="vStack">
+      <header className="vStack" style={{ gap: 4 }}>
+        <h2 className="title">404 — Page Not Found</h2>
+        <p className="subtitle">The page you’re looking for doesn’t exist.</p>
+      </header>
+
+      <div className="btnRow">
+        <Link className="btn btnPrimary" href="/">
+          Go to Directory
+        </Link>
+      </div>
+    </div>
   );
 }
